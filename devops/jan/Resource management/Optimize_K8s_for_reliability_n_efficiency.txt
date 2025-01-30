@@ -1,0 +1,33 @@
+
+
+1. Standard resource request
+   - If autoscaler is enabled and resources are
+     available to be used (because resource limits have not been set),
+     it would scale up
+       - If request is not set, it wold keep throwing requests on 
+         similar nodes without understanding (because k8s schedules
+         based on requests)
+
+
+2. The golden signal
+   - Workload right-sizing: Actual resource utilization vs Requested 
+                            resources
+
+   - Demand-based downscaling: Low demand should drive downscaling
+
+   - Bin packing: Requested resources vs Allocatable resources
+
+   - Discout coverage: 
+
+
+3. Understanding that setting the amount of resource requests for the
+   workloads that have a *minimum_reliability
+   - workload right-sizing is the most critical parameter
+     - Improper workload right-zing could impact your scalability
+       and bin-packing
+
+
+
+## Key findings
+
+1. Kubernetes cost optimization starts with understanding the importance
